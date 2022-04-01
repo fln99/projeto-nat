@@ -13,11 +13,9 @@ while True:
     if garrafas_refri > 10:
         print("Limite máximo permitido de 10 litros!")
         continue
-
     break
 
 capacidade_garrafas = float(input("Capacidade das garrafas (litros): "))
-
 capacidade_copos = float(input("Capacidade dos copos (mililitros): "))
 
 while True:
@@ -26,17 +24,12 @@ while True:
     if total_pessoas > 200:
         print("Limite máximo de 200 pessoas!")
         continue
-
     break
 
-
-# print(f'{garrafas_refri} {capacidade_garrafas} {capacidade_copos} {total_pessoas}')
 
 total_litros_refri = garrafas_refri * capacidade_garrafas
 quantidade_copos = (total_litros_refri * 1000) / capacidade_copos
 copos_faltantes = total_pessoas - quantidade_copos
-
-# print(f"[teste] Litros de refrigerante: {garrafas_refri * capacidade_garrafas}")
 
 print('-' * 20)
 
@@ -46,10 +39,9 @@ palavra_chave = ''
 
 if copos_faltantes < 0:
     palavra_chave = 'a mais'
+    
 else:
     palavra_chave = 'faltantes'
 
-print(f"{abs(round(copos_faltantes, 2))} copos {palavra_chave}.")
-
-print(f"{abs(round((copos_faltantes * capacidade_copos) / 1000))} litros {palavra_chave}")
+print(f"""{abs(round(copos_faltantes, 2))} copos {palavra_chave}.\n{abs(round((copos_faltantes * capacidade_copos) / 1000))} litros {palavra_chave}.""")
 
