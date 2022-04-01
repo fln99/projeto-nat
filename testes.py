@@ -1,47 +1,52 @@
 '''
-Protótipo: Máquina de Refrigerante
+Protótipo: Máquina de Refrigerante.
 
-Componentes do grupo:
+Componentes:
 - Olivia
 - Guilherme
 - Felipe
 '''
 
-while True:
-    garrafas_refri = int(input("Quantidade de garrafas de refrigerante: "))
+LIMITE_GARRAFAS = 10
+LIMITE_PESSOAS = 200
+LITRO_EM_ML = 1000
 
-    if garrafas_refri > 10:
+while True:
+    garrafas_refrigerante = int(input("Quantidade de garrafas de refrigerante: "))
+
+    if garrafas_refrigerante > LIMITE_GARRAFAS:
         print("Limite máximo permitido de 10 litros!")
         continue
+
     break
 
-capacidade_garrafas = float(input("Capacidade das garrafas (litros): "))
-capacidade_copos = float(input("Capacidade dos copos (mililitros): "))
+capacidade_das_garrafas = float(input("Capacidade das garrafas (litros): "))
+capacidade_dos_copos = float(input("Capacidade dos copos (mililitros): "))
 
 while True:
-    total_pessoas = int(input("Quantidade de pessoas no evento: "))
+    total_de_pessoas = int(input("Quantidade de pessoas no evento: "))
 
-    if total_pessoas > 200:
+    if total_de_pessoas > LIMITE_PESSOAS:
         print("Limite máximo de 200 pessoas!")
         continue
+
     break
 
 
-total_litros_refri = garrafas_refri * capacidade_garrafas
-quantidade_copos = (total_litros_refri * 1000) / capacidade_copos
-copos_faltantes = total_pessoas - quantidade_copos
+total_litros_de_refrigerante = garrafas_refrigerante * capacidade_das_garrafas
+quantidade_de_copos = (total_litros_de_refrigerante * LITRO_EM_ML) / capacidade_dos_copos
+copos_que_faltam = total_de_pessoas - quantidade_de_copos
+
+contexto = ''
+
+if copos_que_faltam < 0:
+    contexto = 'a mais'
+
+else:
+    contexto = 'faltantes'
 
 print('-' * 20)
 
-print(f"{round(quantidade_copos,2)} copos de {capacidade_copos} ml")
+print(f"{round(quantidade_de_copos)} copos de {capacidade_dos_copos} ml")
 
-palavra_chave = ''
-
-if copos_faltantes < 0:
-    palavra_chave = 'a mais'
-    
-else:
-    palavra_chave = 'faltantes'
-
-print(f"""{abs(round(copos_faltantes, 2))} copos {palavra_chave}.\n{abs(round((copos_faltantes * capacidade_copos) / 1000))} litros {palavra_chave}.""")
-
+print(f"""{abs(round(copos_que_faltam))} copos {contexto}.\n{abs(round((copos_que_faltam * capacidade_dos_copos) / 1000))} litros {contexto}.""")
