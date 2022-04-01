@@ -36,7 +36,7 @@ total_litros_refri = garrafas_refri * capacidade_garrafas
 quantidade_copos = (total_litros_refri * 1000) / capacidade_copos
 copos_faltantes = total_pessoas - quantidade_copos
 
-print(f"[teste] Litros de refrigerante: {garrafas_refri * capacidade_garrafas}")
+# print(f"[teste] Litros de refrigerante: {garrafas_refri * capacidade_garrafas}")
 
 print('-' * 20)
 
