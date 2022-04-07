@@ -18,7 +18,7 @@ while True:
     garrafas_refrigerante = float(input("Quantidade de garrafas de refrigerante: "))
 
     if garrafas_refrigerante > LIMITE_GARRAFAS:
-        print("Limite máximo permitido de 10 litros!")
+        print("[!] Limite máximo permitido de 10 litros!")
         continue
 
     break
@@ -43,11 +43,8 @@ while True:
 
 
 total_litros_de_refrigerante = garrafas_refrigerante * capacidade_das_garrafas
-
 quantidade_de_copos = (total_litros_de_refrigerante * LITRO_EM_ML) // capacidade_dos_copos
-
 resto_na_maquina = (total_litros_de_refrigerante * LITRO_EM_ML) % capacidade_dos_copos
-
 copos_que_faltam = total_de_pessoas - quantidade_de_copos
 
 contexto = ''
@@ -60,7 +57,11 @@ else:
 
 print('-' * ESPACAMENTO + '\n' + '-' * ESPACAMENTO)
 
+print(f"Quantidade de refrigerante: {total_litros_de_refrigerante} L.")
 print(f"A máquina produzirá {round(quantidade_de_copos)} copos de {capacidade_dos_copos} ml.")
+print(f"Quantidade de refrigerante restante na máquina: {resto_na_maquina} ml.")
 
+# no segundo placeholder, se faltam copos, o restante na máquina será descontado da soma da capacidade dos copos faltantes e \
+# se sobram copos, o resto será incluído na soma da capacidade dos copos que sobram.
 if copos_que_faltam != 0:
-    print(f"{contexto} {abs(round(copos_que_faltam))} copos ({abs(round((copos_que_faltam * capacidade_dos_copos) / 1000, 2))} litros).")
+    print(f"{contexto} {abs(round(copos_que_faltam))} copos ({abs(round((copos_que_faltam * capacidade_dos_copos - resto_na_maquina) / 1000, 2))} litros).")
