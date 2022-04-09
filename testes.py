@@ -1,5 +1,5 @@
 '''
-Protótipo: Máquina de Refrigerante.
+Máquina de Refrigerante.
 
 Componentes:
 - Olivia
@@ -12,13 +12,15 @@ LIMITE_PESSOAS = 200
 LITRO_EM_ML = 1000
 ESPACAMENTO = 42
 
+print("Atenção: Limite máximo de 10 garrafas e 200 pessoas.")
+
 while True:
     print("=" * ESPACAMENTO)
 
     garrafas_refrigerante = float(input("Quantidade de garrafas de refrigerante: "))
 
     if garrafas_refrigerante > LIMITE_GARRAFAS:
-        print("[!] Limite máximo permitido de 10 litros!")
+        print("[!] Limite máximo permitido de 10 garrafas!")
         continue
 
     break
