@@ -84,3 +84,5 @@ print(f"Pessoas na festa: {total_de_pessoas}.")
 if copos_que_faltam != 0:
     print(f"{contexto} {abs(round(copos_que_faltam))} copos"
           f"({abs(round((copos_que_faltam * capacidade_dos_copos - resto_na_maquina) / 1000, 2))} litros).")
+    
+    
