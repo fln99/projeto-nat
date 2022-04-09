@@ -5,8 +5,6 @@ Componentes:
 - Olivia
 - Guilherme
 - Felipe
-
-Proposta: controle do suprimento de refrigerante
 """
 
 LIMITE_GARRAFAS = 10
