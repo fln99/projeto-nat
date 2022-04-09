@@ -50,7 +50,7 @@ while True:
 while True:
     print("=" * ESPACAMENTO)
 
-    total_de_pessoas = float(input("Quantidade de pessoas no evento: "))
+    total_de_pessoas = int(input("Quantidade de pessoas no evento: "))
 
     if total_de_pessoas > LIMITE_PESSOAS or total_de_pessoas < 3:
         print("Limite máximo de 200 pessoas e mínimo de 3 pessoas!")
@@ -76,6 +76,7 @@ print('-' * ESPACAMENTO + '\n' + '-' * ESPACAMENTO)
 print(f"Quantidade de refrigerante: {total_litros_de_refrigerante} L.")
 print(f"A máquina é capaz de produzir {round(quantidade_de_copos)} copos de {capacidade_dos_copos} ml.")
 print(f"Refrigerante restante na máquina: {resto_na_maquina} ml.")
+print(f"Pessoas na festa: {total_de_pessoas}.")
 
 # no segundo placeholder, se faltam copos,
 # o restante na máquina será descontado da soma da capacidade dos copos faltantes e
