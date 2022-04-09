@@ -58,7 +58,6 @@ while True:
 
     break
 
-
 total_litros_de_refrigerante = garrafas_refrigerante * capacidade_das_garrafas
 quantidade_de_copos = (total_litros_de_refrigerante * LITRO_EM_ML) // capacidade_dos_copos
 resto_na_maquina = (total_litros_de_refrigerante * LITRO_EM_ML) % capacidade_dos_copos
