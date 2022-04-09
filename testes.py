@@ -25,12 +25,27 @@ while True:
 
     break
 
+while True:
+    print("=" * ESPACAMENTO)
 
-print("=" * ESPACAMENTO)
-capacidade_das_garrafas = float(input("Capacidade das garrafas (litros): "))
+    capacidade_das_garrafas = float(input("Capacidade das garrafas (litros): "))
 
-print("=" * ESPACAMENTO)
-capacidade_dos_copos = float(input("Capacidade dos copos (mililitros): "))
+    if capacidade_das_garrafas <= 0:
+        print("[!] Insira a capacidade das garrafas.")
+        continue
+
+    break
+
+while True:
+    print("=" * ESPACAMENTO)
+
+    capacidade_dos_copos = float(input("Capacidade dos copos (mililitros): "))
+
+    if capacidade_dos_copos < 50:
+        print("[!] O mínimo de capacidade do copo é de 50 ml.")
+        continue
+
+    break
 
 while True:
     print("=" * ESPACAMENTO)
